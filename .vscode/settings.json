@@ -9,5 +9,8 @@
     "strings": "on"
   },
   "oxc.configPath": ".oxlintrc.json",
-  "oxc.fmt.configPath": ".oxfmtrc.json"
+  "oxc.fmt.configPath": ".oxfmtrc.json",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
