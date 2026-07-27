@@ -14,7 +14,7 @@
     ]
   },
   "sortTailwindcss": {
-    "stylesheet": "./libs/ui/src/styles.css",
+    "stylesheet": "./libs/ui/src/styles/main.css",
     "functions": ["tw", "clsx", "cn", "twMerge", "cva"]
   }
 }
