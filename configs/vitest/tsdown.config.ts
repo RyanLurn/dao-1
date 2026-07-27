@@ -1,3 +1,3 @@
-import { libConfig } from "@repo/tsdown-config";
+import { createLibConfig } from "@repo/tsdown-config";
 
-export default libConfig;
+export default createLibConfig({ platform: "node" });

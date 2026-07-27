@@ -1,8 +1,6 @@
-import { reactLibConfig } from "@repo/tsdown-config";
-import { defineConfig } from "tsdown";
+import { createReactLibConfig } from "@repo/tsdown-config";
 
-export default defineConfig({
-  ...reactLibConfig,
+export default createReactLibConfig({
   exports: {
     customExports: {
       "./styles": "./src/styles.css",

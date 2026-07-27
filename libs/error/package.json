@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./classes/base": "./dist/classes/base.mjs",
-    "./classes/unexpected": "./dist/classes/unexpected.mjs",
-    "./serialize-nested-error": "./dist/serialize-nested-error.mjs",
-    "./types": "./dist/types.mjs",
+    "./classes/base": "./dist/classes/base.js",
+    "./classes/unexpected": "./dist/classes/unexpected.js",
+    "./serialize-nested-error": "./dist/serialize-nested-error.js",
+    "./types": "./dist/types.js",
     "./package.json": "./package.json"
   },
   "scripts": {
