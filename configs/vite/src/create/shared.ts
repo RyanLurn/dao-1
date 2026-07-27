@@ -2,13 +2,12 @@ import type { UserConfig } from "vite";
 
 import { resolve } from "node:path";
 
+import type { SharedConfig } from "@/types";
+
 export function createSharedViteConfig({
   dirname,
   port,
-}: {
-  dirname: string;
-  port: number;
-}): UserConfig {
+}: SharedConfig): UserConfig {
   return {
     resolve: {
       alias: {
