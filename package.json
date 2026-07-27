@@ -1,6 +1,12 @@
 {
   "name": "dao-1",
   "type": "module",
+  "devDependencies": {
+    "oxfmt": "0.60.0",
+    "oxlint": "1.74.0",
+    "oxlint-tsgolint": "0.25.0",
+    "turbo": "2.10.7"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
