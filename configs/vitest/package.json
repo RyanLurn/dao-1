@@ -1,0 +1,19 @@
+{
+  "name": "@repo/vitest-config",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsdown --config-loader tsx"
+  },
+  "dependencies": {
+    "vitest": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsdown-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
+  }
+}
