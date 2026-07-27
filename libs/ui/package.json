@@ -9,7 +9,6 @@
     "clsx": "2.1.1",
     "lucide-react": "1.27.0",
     "react": "catalog:",
-    "react-dom": "catalog:",
     "shadcn": "4.15.0",
     "tailwind-merge": "3.6.0",
     "tailwindcss": "catalog:",
@@ -18,13 +17,10 @@
   "devDependencies": {
     "@repo/tsdown-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@repo/vite-config": "workspace:*",
     "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
     "babel-plugin-react-compiler": "catalog:",
     "tsdown": "catalog:",
     "tsx": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "typescript": "catalog:"
   }
 }
