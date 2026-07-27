@@ -1,0 +1,23 @@
+{
+  "name": "@repo/vite-config",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsdown --config-loader tsx"
+  },
+  "dependencies": {
+    "@rolldown/plugin-babel": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@tanstack/react-start": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "vite": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsdown-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
+  }
+}
