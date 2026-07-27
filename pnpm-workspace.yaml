@@ -1,0 +1,23 @@
+savePrefix: ""
+
+enableGlobalVirtualStore: true
+
+packages:
+  - apps/*
+  - configs/*
+  - libs/*
+  - tools/*
+
+catalogMode: prefer
+
+catalog:
+  "@types/node": 26.1.1
+  tsdown: 0.22.14
+  tsx: 4.23.1
+  typescript: 6.0.3
+  vite: 8.1.5
+  vitest: 4.1.10
+  zod: 4.4.3
+
+allowBuilds:
+  esbuild: true
