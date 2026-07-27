@@ -233,13 +233,14 @@ importers:
         version: 2.10.7
 
   configs/tsdown:
+    dependencies:
+      tsdown:
+        specifier: 'catalog:'
+        version: 0.22.14(tsx@4.23.1)(typescript@6.0.3)
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript
-      tsdown:
-        specifier: 'catalog:'
-        version: 0.22.14(tsx@4.23.1)(typescript@6.0.3)
       tsx:
         specifier: 'catalog:'
         version: 4.23.1

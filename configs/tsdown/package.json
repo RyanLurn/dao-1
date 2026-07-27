@@ -5,9 +5,11 @@
   "scripts": {
     "build": "tsdown --config-loader tsx"
   },
+  "dependencies": {
+    "tsdown": "catalog:"
+  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   }
