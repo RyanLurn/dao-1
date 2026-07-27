@@ -8,8 +8,6 @@ packages:
   - libs/*
   - tools/*
 
-catalogMode: prefer
-
 catalog:
   "@rolldown/plugin-babel": 0.2.3
   "@tailwindcss/vite": 4.3.3
