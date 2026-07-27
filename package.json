@@ -11,7 +11,8 @@
     "lint": "pnpm run build:packages && oxlint --disable-nested-config",
     "lint:fix": "pnpm run build:packages && oxlint --fix --disable-nested-config",
     "check": "pnpm run lint && pnpm run fmt:check",
-    "fix": "pnpm run lint:fix && pnpm run fmt"
+    "fix": "pnpm run lint:fix && pnpm run fmt",
+    "ui:add": "pnpm --filter @repo/ui run shadcn:add"
   },
   "devDependencies": {
     "oxfmt": "0.60.0",
