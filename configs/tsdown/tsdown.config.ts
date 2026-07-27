@@ -1,3 +1,3 @@
-import { libConfig } from "./src/index.ts";
+import { createLibConfig } from "./src/index.ts";
 
-export default libConfig;
+export default createLibConfig({ platform: "node" });
