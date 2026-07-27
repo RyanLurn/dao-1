@@ -8,7 +8,8 @@
     "./components/spinner": "./dist/components/spinner.js",
     "./components/toast": "./dist/components/toast.js",
     "./lib/cn": "./dist/lib/cn.js",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./styles": "./src/styles.css"
   },
   "scripts": {
     "build": "tsdown",
