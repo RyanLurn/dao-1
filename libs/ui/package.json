@@ -2,7 +2,16 @@
   "name": "@repo/ui",
   "private": true,
   "type": "module",
+  "exports": {
+    "./components/button": "./dist/components/button.js",
+    "./components/dropdown-menu": "./dist/components/dropdown-menu.js",
+    "./components/spinner": "./dist/components/spinner.js",
+    "./components/toast": "./dist/components/toast.js",
+    "./lib/cn": "./dist/lib/cn.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
+    "build": "tsdown",
     "shadcn:add": "pnpm dlx shadcn add"
   },
   "dependencies": {
