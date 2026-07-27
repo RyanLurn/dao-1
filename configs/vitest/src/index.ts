@@ -1,13 +1,18 @@
-import { resolve } from "node:path";
-import { defineConfig } from "vitest/config";
+import type { ViteUserConfig } from "vitest/config";
 
-export function createVitestConfig({ dirname }: { dirname: string }) {
-  return defineConfig({
+import { resolve } from "node:path";
+
+export function createVitestConfig({
+  dirname,
+}: {
+  dirname: string;
+}): ViteUserConfig {
+  return {
     test: {
       alias: {
         "@": resolve(dirname, "src"),
         "@test": resolve(dirname, "test"),
       },
     },
-  });
+  };
 }
