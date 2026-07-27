@@ -1,0 +1,22 @@
+{
+  "name": "@repo/ui",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsdown-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/vite-config": "workspace:*",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "babel-plugin-react-compiler": "catalog:",
+    "tsdown": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}
