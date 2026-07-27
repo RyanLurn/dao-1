@@ -12,5 +12,13 @@
   "oxc.fmt.configPath": ".oxfmtrc.json",
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "tailwindCSS.classFunctions": [
+    "tw",
+    "clsx",
+    "tw\\.[a-z-]+",
+    "cn",
+    "twMerge",
+    "cva"
+  ]
 }
