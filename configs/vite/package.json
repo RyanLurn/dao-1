@@ -2,6 +2,13 @@
   "name": "@repo/vite-config",
   "private": true,
   "type": "module",
+  "exports": {
+    "./create/frontend": "./dist/create/frontend.mjs",
+    "./create/fullstack": "./dist/create/fullstack.mjs",
+    "./create/shared": "./dist/create/shared.mjs",
+    "./types": "./dist/types.mjs",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "tsdown --config-loader tsx"
   },
