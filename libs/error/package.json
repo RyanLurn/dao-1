@@ -19,7 +19,6 @@
     "@repo/tsdown-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "tsdown": "catalog:",
-    "tsx": "catalog:",
     "typescript": "catalog:"
   }
 }

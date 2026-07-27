@@ -24,7 +24,6 @@
     "@repo/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "tsdown": "catalog:",
-    "tsx": "catalog:",
     "typescript": "catalog:"
   }
 }

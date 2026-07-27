@@ -23,7 +23,6 @@
     "@types/react": "catalog:",
     "babel-plugin-react-compiler": "catalog:",
     "tsdown": "catalog:",
-    "tsx": "catalog:",
     "typescript": "catalog:"
   }
 }
