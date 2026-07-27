@@ -17,6 +17,8 @@
   "rules": {
     "import/consistent-type-specifier-style": "error",
     "import/no-cycle": "error",
+    "react/exhaustive-deps": "error",
+    "react/rules-of-hooks": "error",
     "typescript/consistent-type-exports": "error",
     "typescript/consistent-type-imports": "error",
     "typescript/no-import-type-side-effects": "error",
