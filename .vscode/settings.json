@@ -20,5 +20,6 @@
     "cn",
     "twMerge",
     "cva"
-  ]
+  ],
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
 }
