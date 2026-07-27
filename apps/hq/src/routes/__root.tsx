@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { Toaster } from "@repo/ui/components/toast";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import styles from "@/globals.css?url";
@@ -34,6 +35,7 @@ function AppShell({ children }: Readonly<{ children: ReactNode }>) {
       </head>
       <body>
         <div className="h-screen">{children}</div>
+        <Toaster />
         <Scripts />
       </body>
     </html>
