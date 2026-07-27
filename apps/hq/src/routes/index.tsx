@@ -8,8 +8,8 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-y-3">
-      <h1 className="text-3xl font-bold">Welcome home!</h1>
+    <div className="typeset flex h-full flex-col items-center justify-center gap-y-3">
+      <h1>Welcome home!</h1>
       <Button
         onClick={() =>
           toast.add({
