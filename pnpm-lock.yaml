@@ -411,6 +411,12 @@ importers:
       '@neondatabase/serverless':
         specifier: 1.1.0
         version: 1.1.0
+      '@repo/error':
+        specifier: workspace:*
+        version: link:../error
+      '@repo/result':
+        specifier: workspace:*
+        version: link:../result
       drizzle-orm:
         specifier: 'catalog:'
         version: 1.0.0-rc.4(@neondatabase/serverless@1.1.0)(zod@4.4.3)
