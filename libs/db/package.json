@@ -2,6 +2,13 @@
   "name": "@repo/db",
   "private": true,
   "type": "module",
+  "exports": {
+    "./env": "./dist/env.mjs",
+    "./schema/helpers/id": "./dist/schema/helpers/id.mjs",
+    "./schema/helpers/timestamps": "./dist/schema/helpers/timestamps.mjs",
+    "./schema/tables/user": "./dist/schema/tables/user.mjs",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "tsdown"
   },
