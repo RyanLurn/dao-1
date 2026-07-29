@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/typescript-config/src/base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*", "drizzle.config.ts", "tsdown.config.ts"]
+}
