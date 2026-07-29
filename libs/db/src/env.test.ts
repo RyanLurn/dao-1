@@ -3,21 +3,22 @@ import { describe, expect, test } from "vitest";
 import { DbEnvSchema } from "@/env";
 
 const validKey = "NEON_POOLED_CONNECTION_STRING";
-
+const validValue =
+  "postgresql://user1:AbC123dEf@ep-cool-darkness-123456-pooler.us-east-2.aws.neon.tech/dbname?sslmode=require";
 const invalidValue =
   "postgresql://user1:AbC123dEf@ep-cool-darkness-123456.us-east-2.aws.neon.tech/dbname?sslmode=require";
 
 // Success case
-test("DbEnvSchema should validate a valid Neon pooled connection string", () => {
-  const pooledConnectionString =
-    "postgresql://user1:AbC123dEf@ep-cool-darkness-123456-pooler.us-east-2.aws.neon.tech/dbname?sslmode=require";
+test("DbEnvSchema should validate a valid env object", () => {
+  const envObject = {
+    NODE_ENV: "test",
+    [validKey]: validValue,
+  };
 
-  const parseResult = DbEnvSchema.shape.NEON_POOLED_CONNECTION_STRING.safeParse(
-    pooledConnectionString,
-  );
+  const parseResult = DbEnvSchema.safeParse(envObject);
 
   expect.assert(parseResult.success === true);
-  expect(parseResult.data).toBe(pooledConnectionString);
+  expect(parseResult.data).toHaveProperty(validKey, validValue);
 });
 
 // Failure cases
