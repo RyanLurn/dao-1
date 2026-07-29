@@ -10,7 +10,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "tsdown"
+    "build": "tsdown",
+    "test": "vitest run"
   },
   "dependencies": {
     "@neondatabase/serverless": "1.1.0",
@@ -20,9 +21,11 @@
   "devDependencies": {
     "@repo/tsdown-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/vitest-config": "workspace:*",
     "@types/node": "catalog:",
     "drizzle-kit": "1.0.0-rc.4",
     "tsdown": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }
