@@ -8,8 +8,8 @@ import type { SharedConfig } from "@/types";
 
 import { createSharedViteConfig } from "@/create/shared";
 
-export function createFullstackViteConfig({ dirname, port }: SharedConfig) {
-  const sharedConfig = createSharedViteConfig({ dirname, port });
+export function createFullstackViteConfig({ port }: SharedConfig) {
+  const sharedConfig = createSharedViteConfig({ port });
   return defineConfig({
     ...sharedConfig,
     plugins: [

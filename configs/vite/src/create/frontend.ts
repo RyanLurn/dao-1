@@ -7,8 +7,8 @@ import type { SharedConfig } from "@/types";
 
 import { createSharedViteConfig } from "@/create/shared";
 
-export function createFrontendViteConfig({ dirname, port }: SharedConfig) {
-  const sharedConfig = createSharedViteConfig({ dirname, port });
+export function createFrontendViteConfig({ port }: SharedConfig) {
+  const sharedConfig = createSharedViteConfig({ port });
   return defineConfig({
     ...sharedConfig,
     plugins: [
