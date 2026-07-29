@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./connect": "./dist/connect.mjs",
     "./env": "./dist/env.mjs",
+    "./errors": "./dist/errors.mjs",
     "./schema/helpers/id": "./dist/schema/helpers/id.mjs",
     "./schema/helpers/timestamps": "./dist/schema/helpers/timestamps.mjs",
     "./schema/tables/user": "./dist/schema/tables/user.mjs",
