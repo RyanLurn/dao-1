@@ -2,6 +2,13 @@
   "name": "@repo/node-env",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
   "dependencies": {
     "zod": "catalog:"
   },
