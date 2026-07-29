@@ -1,7 +1,7 @@
 {
   "extends": "@repo/typescript-config/src/base.json",
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node", "vitest"],
     "paths": {
       "@/*": ["./src/*"]
     }
