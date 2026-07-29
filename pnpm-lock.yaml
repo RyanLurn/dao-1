@@ -256,6 +256,9 @@ catalogs:
     vitest:
       specifier: 4.1.10
       version: 4.1.10
+    zod:
+      specifier: 4.4.3
+      version: 4.4.3
 
 importers:
 
@@ -412,6 +415,28 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../configs/typescript
+      tsdown:
+        specifier: 'catalog:'
+        version: 0.22.14(tsx@4.23.1)(typescript@6.0.3)
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.3
+
+  libs/node-env:
+    dependencies:
+      zod:
+        specifier: 'catalog:'
+        version: 4.4.3
+    devDependencies:
+      '@repo/tsdown-config':
+        specifier: workspace:*
+        version: link:../../configs/tsdown
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@types/node':
+        specifier: 'catalog:'
+        version: 26.1.1
       tsdown:
         specifier: 'catalog:'
         version: 0.22.14(tsx@4.23.1)(typescript@6.0.3)
