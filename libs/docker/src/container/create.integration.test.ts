@@ -23,7 +23,7 @@ test("createDockerContainer function should create a Docker container", async ()
 
   expect(statusCode).toBe(201);
   expect(parsedBody).toHaveProperty("Id");
-  expect(parsedBody).toHaveProperty("Warnings");
+  expect(parsedBody).toHaveProperty("Warnings", []);
 });
 
 // Failure cases
