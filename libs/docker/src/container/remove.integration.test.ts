@@ -1,5 +1,12 @@
 import { x } from "tinyexec";
-import { beforeAll, afterAll, test, describe, expect } from "vitest";
+import {
+  beforeAll,
+  afterAll,
+  test,
+  describe,
+  expect,
+  onTestFailed,
+} from "vitest";
 
 import { DockerClient } from "@/client";
 import { removeDockerContainer } from "@/container/remove";
@@ -24,6 +31,18 @@ describe("removeDockerContainer function should remove", async () => {
       { throwOnError: true },
     );
     const containerId = DockerContainerIdSchema.parse(stdout.trim());
+
+    onTestFailed(async () => {
+      const { exitCode, stderr } = await x(
+        "docker",
+        ["container", "remove", containerId],
+        { throwOnError: true },
+      );
+      if (exitCode !== 0) {
+        console.error(`Failed to clean up ${containerId} on test failed:`);
+        console.error(stderr);
+      }
+    });
 
     const { statusCode } = await removeDockerContainer({
       dockerClient,
