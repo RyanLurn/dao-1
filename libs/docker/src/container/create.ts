@@ -1,4 +1,11 @@
+import { z } from "zod";
+
 import type { DockerClient } from "@/client";
+
+export const CreateDockerContainerResponseBodySchema = z.object({
+  Id: z.string(),
+  Warnings: z.array(z.string()),
+});
 
 export async function createDockerContainer({
   dockerClient,
