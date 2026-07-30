@@ -1,5 +1,5 @@
 {
-  "name": "@repo/container",
+  "name": "@repo/docker",
   "private": true,
   "type": "module",
   "scripts": {
