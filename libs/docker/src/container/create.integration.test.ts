@@ -1,4 +1,12 @@
-import { afterAll, beforeAll, describe, expect, test } from "vitest";
+import { x } from "tinyexec";
+import {
+  afterAll,
+  beforeAll,
+  describe,
+  expect,
+  onTestFinished,
+  test,
+} from "vitest";
 
 import { DockerClient } from "@/client";
 import { createDockerContainer } from "@/container/create";
@@ -15,15 +23,26 @@ afterAll(async () => {
 
 // Success case
 test("createDockerContainer function should create a Docker container", async () => {
+  const containerName = "createDockerContainer-integration-test-success-case";
+
   const { statusCode, parsedBody } = await createDockerContainer({
     dockerClient,
-    containerName: "createDockerContainer-integration-test-success-case",
+    containerName,
     imageName: "hello-world:latest",
   });
 
   expect(statusCode).toBe(201);
   expect(parsedBody).toHaveProperty("Id");
   expect(parsedBody).toHaveProperty("Warnings", []);
+
+  onTestFinished(async () => {
+    const result = await x("docker", ["container", "remove", containerName]);
+    if (result.exitCode !== 0) {
+      console.warn(`Failed to clean up ${containerName}:`);
+      console.warn(result.stdout);
+      console.warn(result.stderr);
+    }
+  });
 });
 
 // Failure cases
