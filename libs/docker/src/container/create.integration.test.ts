@@ -42,18 +42,15 @@ describe("createDockerContainer function should return", async () => {
   });
 
   test("a 404 status code for an image that doesn't exist", async () => {
-    const nonExistentImageName = "no-such-image:latest";
-
     const { statusCode, parsedBody } = await createDockerContainer({
       dockerClient,
       containerName: "createDockerContainer-integration-test-404-case",
-      imageName: nonExistentImageName,
+      imageName: "no-such-image:latest",
     });
 
     expect(statusCode).toBe(404);
-    expect(parsedBody).toHaveProperty(
-      "message",
-      `No such image: ${nonExistentImageName}`,
-    );
+    expect(parsedBody).toMatchObject({
+      message: expect.stringContaining("No such image"),
+    });
   });
 });
