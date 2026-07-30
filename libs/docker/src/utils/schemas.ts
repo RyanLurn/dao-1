@@ -9,3 +9,7 @@ export const DockerContainerNameSchema = z
   .stringFormat(DOCKER_CONTAINER_NAME_FORMAT, DOCKER_CONTAINER_NAME_REGEX)
   .brand<"DockerContainerName">();
 export type DockerContainerName = z.infer<typeof DockerContainerNameSchema>;
+
+export const DockerErrorResponseBodySchema = z.object({
+  message: z.string(),
+});
