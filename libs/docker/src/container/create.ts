@@ -3,10 +3,13 @@ import { z } from "zod";
 import type { DockerClient } from "@/client";
 
 import { DOCKER_ENGINE_API_RESOURCES } from "@/utils/constants";
-import { DockerErrorResponseBodySchema } from "@/utils/schemas";
+import {
+  DockerContainerIdSchema,
+  DockerErrorResponseBodySchema,
+} from "@/utils/schemas";
 
 const SuccessResponseBodySchema = z.object({
-  Id: z.string(),
+  Id: DockerContainerIdSchema,
   Warnings: z.array(z.string()),
 });
 
