@@ -1,10 +1,10 @@
 import { z } from "zod";
 
-import { ContainerNameSchema } from "@/utils/schemas";
+import { DockerContainerNameSchema } from "@/utils/schemas";
 
 export const DockerContainerCreateQueryParamsSchema = z
   .object({
-    name: ContainerNameSchema,
+    name: DockerContainerNameSchema,
     platform: z.templateLiteral([
       z.string(),
       z

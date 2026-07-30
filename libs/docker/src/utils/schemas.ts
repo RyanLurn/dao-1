@@ -1,8 +1,11 @@
 import { z } from "zod";
 
-import { CONTAINER_NAME_FORMAT, CONTAINER_NAME_REGEX } from "@/utils/constants";
+import {
+  DOCKER_CONTAINER_NAME_FORMAT,
+  DOCKER_CONTAINER_NAME_REGEX,
+} from "@/utils/constants";
 
-export const ContainerNameSchema = z
-  .stringFormat(CONTAINER_NAME_FORMAT, CONTAINER_NAME_REGEX)
-  .brand<"ContainerName">();
-export type ContainerName = z.infer<typeof ContainerNameSchema>;
+export const DockerContainerNameSchema = z
+  .stringFormat(DOCKER_CONTAINER_NAME_FORMAT, DOCKER_CONTAINER_NAME_REGEX)
+  .brand<"DockerContainerName">();
+export type DockerContainerName = z.infer<typeof DockerContainerNameSchema>;
