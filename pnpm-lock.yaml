@@ -247,6 +247,9 @@ catalogs:
     tailwindcss:
       specifier: 4.3.3
       version: 4.3.3
+    tinyexec:
+      specifier: 1.2.4
+      version: 1.2.4
     tsdown:
       specifier: 0.22.14
       version: 0.22.14
@@ -460,6 +463,9 @@ importers:
       '@repo/result':
         specifier: workspace:*
         version: link:../result
+      tinyexec:
+        specifier: 'catalog:'
+        version: 1.2.4
       undici:
         specifier: 'catalog:'
         version: 8.9.0

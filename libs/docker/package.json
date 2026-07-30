@@ -8,6 +8,7 @@
   "dependencies": {
     "@repo/error": "workspace:*",
     "@repo/result": "workspace:*",
+    "tinyexec": "catalog:",
     "undici": "catalog:",
     "zod": "catalog:"
   },
