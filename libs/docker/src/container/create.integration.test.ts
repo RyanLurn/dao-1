@@ -28,6 +28,19 @@ test("createDockerContainer function should create a Docker container", async ()
 
 // Failure cases
 describe("createDockerContainer function should return", async () => {
+  test("a 400 status code for a name that doesn't match the pattern of /?[a-zA-Z0-9][a-zA-Z0-9_.-]+", async () => {
+    const { statusCode, parsedBody } = await createDockerContainer({
+      dockerClient,
+      containerName: "!",
+      imageName: "hello-world:latest",
+    });
+
+    expect(statusCode).toBe(400);
+    expect(parsedBody).toMatchObject({
+      message: expect.stringContaining("Invalid container name"),
+    });
+  });
+
   test("a 404 status code for an image that doesn't exist", async () => {
     const nonExistentImageName = "no-such-image:latest";
 
