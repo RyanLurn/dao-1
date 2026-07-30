@@ -21,7 +21,7 @@ export async function createDockerContainer({
   autoRemove?: boolean;
 }) {
   const { statusCode, statusText, body } = await dockerClient.request({
-    path: `/${dockerClient.apiVersion}/container/create`,
+    path: `/${dockerClient.apiVersion}/containers/create`,
     method: "POST",
     query: {
       name: containerName,
