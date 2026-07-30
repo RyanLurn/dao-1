@@ -2,7 +2,9 @@ import { z } from "zod";
 
 import type { DockerClient } from "@/client";
 
-const _SuccessResponseBodySchema = z.object({
+import { DockerErrorResponseBodySchema } from "@/utils/schemas";
+
+const SuccessResponseBodySchema = z.object({
   Id: z.string(),
   Warnings: z.array(z.string()),
 });
@@ -34,5 +36,14 @@ export async function createDockerContainer({
       },
     }),
   });
-  return { statusCode, statusText, body };
+  const jsonBody = await body.json();
+
+  return {
+    statusCode,
+    statusText,
+    parsedBody:
+      statusCode === 201
+        ? SuccessResponseBodySchema.parse(jsonBody)
+        : DockerErrorResponseBodySchema.parse(jsonBody),
+  };
 }
