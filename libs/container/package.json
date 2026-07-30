@@ -1,0 +1,22 @@
+{
+  "name": "@repo/container",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@repo/error": "workspace:*",
+    "@repo/result": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsdown-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/vitest-config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}
