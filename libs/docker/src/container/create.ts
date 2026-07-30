@@ -1,6 +1,4 @@
-import type { Client } from "undici";
-
-import { DEFAULT_DOCKER_ENGINE_API_VERSION } from "@/utils/constants";
+import type { DockerClient } from "@/client";
 
 export async function createDockerContainer({
   dockerClient,
@@ -8,13 +6,13 @@ export async function createDockerContainer({
   imageName,
   autoRemove = true,
 }: {
-  dockerClient: Client;
+  dockerClient: DockerClient;
   containerName: string;
   imageName: string;
   autoRemove?: boolean;
 }) {
   const { statusCode, statusText, body } = await dockerClient.request({
-    path: `/${DEFAULT_DOCKER_ENGINE_API_VERSION}/container/create`,
+    path: `/${dockerClient.apiVersion}/container/create`,
     method: "POST",
     query: {
       name: containerName,
