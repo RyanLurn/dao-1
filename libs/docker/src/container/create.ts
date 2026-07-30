@@ -2,6 +2,7 @@ import { z } from "zod";
 
 import type { DockerClient } from "@/client";
 
+import { DOCKER_ENGINE_API_RESOURCES } from "@/utils/constants";
 import { DockerErrorResponseBodySchema } from "@/utils/schemas";
 
 const SuccessResponseBodySchema = z.object({
@@ -21,7 +22,7 @@ export async function createDockerContainer({
   autoRemove?: boolean;
 }) {
   const { statusCode, statusText, body } = await dockerClient.request({
-    path: `/${dockerClient.apiVersion}/containers/create`,
+    path: `/${dockerClient.apiVersion}/${DOCKER_ENGINE_API_RESOURCES.CONTAINERS}/create`,
     method: "POST",
     query: {
       name: containerName,

@@ -4,3 +4,8 @@ export const DEFAULT_DOCKER_ENGINE_API_SOCKET_PATH = "/var/run/docker.sock";
 
 export const DOCKER_CONTAINER_NAME_FORMAT = "container-name";
 export const DOCKER_CONTAINER_NAME_REGEX = /^\/?[a-zA-Z0-9][a-zA-Z0-9_.-]+$/;
+
+export const DOCKER_ENGINE_API_RESOURCES = {
+  CONTAINERS: "containers",
+  IMAGES: "images",
+} as const;
