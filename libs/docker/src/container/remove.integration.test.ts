@@ -33,15 +33,22 @@ describe("removeDockerContainer function should remove", async () => {
     const containerId = DockerContainerIdSchema.parse(stdout.trim());
 
     onTestFailed(async () => {
-      await x("docker", ["container", "remove", containerId], {
-        throwOnError: true,
-      });
+      const { exitCode, stderr } = await x("docker", [
+        "container",
+        "remove",
+        containerId,
+      ]);
+      if (exitCode !== 0) {
+        console.warn(`Failed to clean up ${containerId} on test failed:`);
+        console.warn(stderr);
+      }
     });
 
-    const { statusCode } = await removeDockerContainer({
+    const { statusCode, parsedBody } = await removeDockerContainer({
       dockerClient,
       containerReference: containerId,
     });
     expect(statusCode).toBe(204);
+    expect(parsedBody).toBeUndefined();
   });
 });

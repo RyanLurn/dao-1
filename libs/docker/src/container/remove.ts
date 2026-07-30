@@ -28,7 +28,7 @@ export async function removeDockerContainer({
   });
 
   if (statusCode === 204) {
-    return { statusCode, statusText, parsedBody: null };
+    return { statusCode, statusText };
   }
 
   const jsonBody = await body.json();
