@@ -42,12 +42,17 @@ export async function createDockerContainer({
   });
   const jsonBody = await body.json();
 
+  if (statusCode === 201) {
+    return {
+      statusCode,
+      statusText,
+      parsedBody: SuccessResponseBodySchema.parse(jsonBody),
+    };
+  }
+
   return {
     statusCode,
     statusText,
-    parsedBody:
-      statusCode === 201
-        ? SuccessResponseBodySchema.parse(jsonBody)
-        : DockerErrorResponseBodySchema.parse(jsonBody),
+    parsedBody: DockerErrorResponseBodySchema.parse(jsonBody),
   };
 }
