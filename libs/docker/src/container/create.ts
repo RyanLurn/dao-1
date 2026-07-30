@@ -1,22 +1,33 @@
-import { z } from "zod";
+import type { Client } from "undici";
 
-import { DockerContainerNameSchema } from "@/utils/schemas";
+import { DEFAULT_DOCKER_ENGINE_API_VERSION } from "@/utils/constants";
 
-export const DockerContainerCreateQueryParamsSchema = z
-  .object({
-    name: DockerContainerNameSchema,
-    platform: z.templateLiteral([
-      z.string(),
-      z
-        .templateLiteral([
-          "/",
-          z.string(),
-          z.templateLiteral(["/", z.string()]).optional(),
-        ])
-        .optional(),
-    ]),
-  })
-  .partial();
-export type DockerContainerCreateQueryParams = z.infer<
-  typeof DockerContainerCreateQueryParamsSchema
->;
+export async function createDockerContainer({
+  dockerClient,
+  containerName,
+  imageName,
+  autoRemove = true,
+}: {
+  dockerClient: Client;
+  containerName: string;
+  imageName: string;
+  autoRemove?: boolean;
+}) {
+  const { statusCode, statusText, body } = await dockerClient.request({
+    path: `/${DEFAULT_DOCKER_ENGINE_API_VERSION}/container/create`,
+    method: "POST",
+    query: {
+      name: containerName,
+    },
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      Image: imageName,
+      HostConfig: {
+        AutoRemove: autoRemove,
+      },
+    }),
+  });
+  return { statusCode, statusText, body };
+}
