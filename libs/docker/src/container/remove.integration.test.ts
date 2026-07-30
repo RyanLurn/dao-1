@@ -10,7 +10,10 @@ import {
 
 import { DockerClient } from "@/client";
 import { removeDockerContainer } from "@/container/remove";
-import { DockerContainerIdSchema } from "@/utils/schemas";
+import {
+  DockerContainerIdSchema,
+  DockerContainerNameSchema,
+} from "@/utils/schemas";
 
 let dockerClient: DockerClient;
 
@@ -47,6 +50,37 @@ describe("removeDockerContainer function should remove", async () => {
     const { statusCode, parsedBody } = await removeDockerContainer({
       dockerClient,
       containerReference: containerId,
+    });
+    expect(statusCode).toBe(204);
+    expect(parsedBody).toBeUndefined();
+  });
+
+  test("an existing container by name", async () => {
+    const containerName = DockerContainerNameSchema.parse(
+      "test-removeDockerContainer-by-name",
+    );
+    const { stdout } = await x(
+      "docker",
+      ["container", "create", "--name", containerName, "hello-world:latest"],
+      { throwOnError: true },
+    );
+    const containerId = DockerContainerIdSchema.parse(stdout.trim());
+
+    onTestFailed(async () => {
+      const { exitCode, stderr } = await x("docker", [
+        "container",
+        "remove",
+        containerId,
+      ]);
+      if (exitCode !== 0) {
+        console.warn(`Failed to clean up ${containerId} on test failed:`);
+        console.warn(stderr);
+      }
+    });
+
+    const { statusCode, parsedBody } = await removeDockerContainer({
+      dockerClient,
+      containerReference: containerName,
     });
     expect(statusCode).toBe(204);
     expect(parsedBody).toBeUndefined();
