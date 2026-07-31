@@ -17,7 +17,7 @@
     "ui:add": "pnpm --filter @repo/ui run shadcn:add"
   },
   "devDependencies": {
-    "oxfmt": "0.60.0",
+    "oxfmt": "0.61.0",
     "oxlint": "1.74.0",
     "oxlint-tsgolint": "0.25.0",
     "turbo": "2.10.7"
