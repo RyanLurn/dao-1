@@ -2,6 +2,10 @@
   "name": "@repo/drive-schemas",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./dist/data.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "tsdown"
   },
