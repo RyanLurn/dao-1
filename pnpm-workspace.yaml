@@ -19,6 +19,7 @@ catalog:
   "@types/react-dom": 19.2.3
   "@vitejs/plugin-react": 6.0.5
   babel-plugin-react-compiler: 1.0.0
+  better-auth: 1.7.0-rc.2
   drizzle-orm: 1.0.0-rc.4
   lucide-react: 1.28.0
   react: 19.2.8
@@ -35,3 +36,6 @@ catalog:
 
 allowBuilds:
   esbuild: true
+
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
