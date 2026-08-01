@@ -14,6 +14,7 @@ export const agentTable = sqliteTable("agents", {
     .notNull()
     .references(() => userTable.id, { onDelete: "cascade" }),
   name: text("name").notNull(),
+  systemPrompt: text("system_prompt").notNull(),
   initialMode: text("initial_mode", { enum: AGENT_MODE_LIST })
     .default("standby")
     .notNull(),
