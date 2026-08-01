@@ -2,7 +2,6 @@ export const AGENT_MODE_LIST = ["standby", "auto", "stopped"] as const;
 
 export const AGENT_MODE_TRANSITION_STATUS_LIST = [
   "started",
-  "in-progress",
   "succeeded",
   "failed",
 ] as const;
