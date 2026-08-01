@@ -6,9 +6,12 @@
     "dev": "vite dev"
   },
   "dependencies": {
+    "@ai-sdk/react": "4.0.47",
+    "@repo/db": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tanstack/react-router": "catalog:",
     "@tanstack/react-start": "catalog:",
+    "ai": "catalog:",
     "lucide-react": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
