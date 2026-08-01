@@ -12,6 +12,7 @@
     "better-auth": "catalog:",
     "drizzle-orm": "catalog:",
     "h3": "2.0.1-rc.26",
+    "uuid": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
