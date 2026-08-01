@@ -6,7 +6,7 @@ export const TEXT_PART_STATE_LIST = [
   TEXT_PART_DONE_STATE,
 ] as const;
 
-export const REASONING_PART_TYPE = "text";
+export const REASONING_PART_TYPE = "reasoning";
 export const REASONING_PART_STREAMING_STATE = "streaming";
 export const REASONING_PART_DONE_STATE = "done";
 export const REASONING_PART_STATE_LIST = [
