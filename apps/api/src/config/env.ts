@@ -8,3 +8,5 @@ export const EnvSchema = z.object({
     z.enum(["db", "sqlite"]),
   ]),
 });
+
+export const env = EnvSchema.parse(process.env);
