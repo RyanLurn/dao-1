@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "try": "tsx ./src/try.ts"
   },
   "dependencies": {
     "@repo/agent-schemas": "workspace:*",
