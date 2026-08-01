@@ -1,4 +1,4 @@
-import { AGENT_MODE_LIST } from "@repo/agent-schemas";
+import { AGENT_MODE_LIST } from "@repo/agent-schemas/constants";
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 import { id } from "@/db/schema/helpers/id";
