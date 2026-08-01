@@ -21,6 +21,7 @@
     "@neondatabase/serverless": "1.1.0",
     "@repo/error": "workspace:*",
     "@repo/result": "workspace:*",
+    "ai": "catalog:",
     "drizzle-orm": "catalog:",
     "zod": "catalog:"
   },

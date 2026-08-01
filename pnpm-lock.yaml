@@ -484,6 +484,9 @@ importers:
       '@repo/result':
         specifier: workspace:*
         version: link:../result
+      ai:
+        specifier: 'catalog:'
+        version: 7.0.44(zod@4.4.3)
       drizzle-orm:
         specifier: 'catalog:'
         version: 1.0.0-rc.4(@neondatabase/serverless@1.1.0)(@tursodatabase/database-common@0.7.2)(@tursodatabase/database@0.7.2)(zod@4.4.3)
