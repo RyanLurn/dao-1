@@ -1,0 +1,15 @@
+{
+  "name": "@repo/message-schemas",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "ai": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsdown-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  }
+}
