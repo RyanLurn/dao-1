@@ -2,6 +2,10 @@
   "name": "@repo/entity-schemas",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./dist/user.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "tsdown"
   },
