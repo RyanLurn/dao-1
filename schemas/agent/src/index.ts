@@ -9,6 +9,9 @@ export const InvalidAgentIdErrorResponseBodySchema = z.object({
   ok: z.literal(false),
   error: z.object({
     code: z.literal(AGENT_SERVICE_ERROR_RECORD.INVALID_AGENT_ID_ERROR.code),
+    message: z.literal(
+      "Invalid agent id format. Please provide a UUID version 7.",
+    ),
     cause: z.literal("Invalid UUID"),
   }),
 });
