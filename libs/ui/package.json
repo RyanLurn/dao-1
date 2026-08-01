@@ -5,6 +5,7 @@
   "exports": {
     "./components/attachment": "./dist/components/attachment.js",
     "./components/avatar": "./dist/components/avatar.js",
+    "./components/bubble": "./dist/components/bubble.js",
     "./components/button": "./dist/components/button.js",
     "./components/dropdown-menu": "./dist/components/dropdown-menu.js",
     "./components/input": "./dist/components/input.js",
