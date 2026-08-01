@@ -11,3 +11,7 @@ export const userTable = sqliteTable("users", {
   image: text("image"),
   ...timestamps,
 });
+
+export const userId = text("user_id")
+  .notNull()
+  .references(() => userTable.id, { onDelete: "cascade" });
