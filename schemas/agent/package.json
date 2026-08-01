@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./dist/constants.js",
+    ".": "./dist/index.js",
+    "./constants": "./dist/constants.js",
     "./package.json": "./package.json"
   },
   "scripts": {
