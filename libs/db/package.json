@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "exports": {
+    ".": "./dist/index.mjs",
     "./connect": "./dist/connect.mjs",
     "./env": "./dist/env.mjs",
     "./errors": "./dist/errors.mjs",
