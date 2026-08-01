@@ -8,9 +8,7 @@
     "./errors": "./dist/errors.mjs",
     "./schema/helpers/id": "./dist/schema/helpers/id.mjs",
     "./schema/helpers/timestamps": "./dist/schema/helpers/timestamps.mjs",
-    "./schema/helpers/user-id": "./dist/schema/helpers/user-id.mjs",
-    "./schema/tables/task": "./dist/schema/tables/task.mjs",
-    "./schema/tables/user": "./dist/schema/tables/user.mjs",
+    "./schema/tables/message": "./dist/schema/tables/message.mjs",
     "./package.json": "./package.json"
   },
   "scripts": {
