@@ -20,6 +20,8 @@ export const agentService = new H3().patch(
           ok: false,
           error: {
             code: "INVALID_AGENT_ID_ERROR",
+            message:
+              "Invalid agent id format. Please provide a UUID version 7.",
             cause: "Invalid UUID",
           },
         } satisfies InvalidAgentIdErrorResponseBody,
