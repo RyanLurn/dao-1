@@ -1,1 +1,1 @@
-export const AGENT_MODE_LIST = ["standby", "auto", "stopped"];
+export const AGENT_MODE_LIST = ["standby", "auto", "stopped"] as const;

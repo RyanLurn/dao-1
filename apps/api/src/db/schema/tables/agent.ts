@@ -1,3 +1,4 @@
+import { AGENT_MODE_LIST } from "@repo/agent-schemas";
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 import { id } from "@/db/schema/helpers/id";
@@ -8,5 +9,6 @@ export const agentTable = sqliteTable("agents", {
   id,
   userId,
   name: text("name").notNull(),
+  mode: text("mode", { enum: AGENT_MODE_LIST }).default("standby").notNull(),
   ...timestamps,
 });

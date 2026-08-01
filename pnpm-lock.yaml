@@ -297,6 +297,9 @@ importers:
 
   apps/api:
     dependencies:
+      '@repo/agent-schemas':
+        specifier: workspace:*
+        version: link:../../schemas/agent
       '@repo/error':
         specifier: workspace:*
         version: link:../../libs/error
