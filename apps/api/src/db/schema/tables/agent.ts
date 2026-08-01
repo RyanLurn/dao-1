@@ -6,13 +6,17 @@ import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 import { id } from "@/db/schema/helpers/id";
 import { timestamps } from "@/db/schema/helpers/timestamps";
-import { userId } from "@/db/schema/tables/user";
+import { userTable } from "@/db/schema/tables/user";
 
 export const agentTable = sqliteTable("agents", {
   id,
-  userId,
+  ownerId: text("owner_id")
+    .notNull()
+    .references(() => userTable.id, { onDelete: "cascade" }),
   name: text("name").notNull(),
-  mode: text("mode", { enum: AGENT_MODE_LIST }).default("standby").notNull(),
+  initialMode: text("initial_mode", { enum: AGENT_MODE_LIST })
+    .default("standby")
+    .notNull(),
   ...timestamps,
 });
 
